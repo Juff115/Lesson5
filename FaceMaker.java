@@ -48,7 +48,12 @@ public class FaceMaker extends PApplet{
         }
         else if(button==moodbtn){
             int mood;
-            mood= Integer.parseInt(JOptionPane.showInputDialog("Enter mood, 1 is happy, 0 is sad "));
+            while(true){
+                mood= Integer.parseInt(JOptionPane.showInputDialog("Enter mood, 1 is happy, 0 is sad "));
+                if(mood==1 || mood==0){
+                    break;
+                }
+            }
             f.erase();
             f.setMood(mood);
         }
